@@ -1,7 +1,6 @@
 package kadai_028;
 
 import java.util.HashMap;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Jyanken_Chapter28 {
@@ -17,9 +16,11 @@ public class Jyanken_Chapter28 {
 	
 	public String getRandom() {
 		String[] hands = {"r", "s", "p" };
-		Random random = new Random();
-		int number = random.nextInt(3);
-		return hands[number];
+		double randomNumber = Math.random() * 3;
+
+		int index = (int) Math.floor(randomNumber);
+
+		return hands[index];
 	}
 	
 	public void playGame() {
